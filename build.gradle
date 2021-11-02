@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+
+dependencies {
+
+implementation 'com.google.code.gson:gson:2.8.8'
+}
+
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+
+javafx {
+    modules = [ 'javafx.controls', 'javafx.fxml']
+    version = '17'
+}
+
+
+application {
+    mainClass = 'app.App'
+}
